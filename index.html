@@ -1,0 +1,49 @@
+<!--
+ * @Author: chenhuang
+ * @Date: 2024-06-26 18:15:40
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟小球滚动图</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        position: relative;
+    }
+
+    #webgl {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+</style>
+<body>
+    <div id="webgl"></div>
+    <script type="importmap" defer>
+        {
+            "imports": {
+                "three": "./plugins/three/build/three.module.js",
+                "three/addons/controls/OrbitControls.js": "./plugins/three/examples/jsm/controls/OrbitControls.js",
+                "three/addons/libs/stats.module.js": "./plugins/three/examples/jsm/libs/stats.module.js"
+            }
+        }
+    </script>
+    <script type="module">
+        // ES6写法import引入
+        import * as THREE from './plugins/three/build/three.module.js';
+        // 浏览器控制台测试，是否引入成功
+        // console.log(THREE.Scene);
+
+        // 逻辑核心文件,这边开始...
+        import "./public/main.js";
+    </script>
+</body>
+</html>
